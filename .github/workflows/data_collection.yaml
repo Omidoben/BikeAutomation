@@ -90,10 +90,6 @@ jobs:
           mkdir -p StationInfoPin
           mkdir -p StationStatusPin
 
-      - name: Collect Station Info
-        run: |
-          Rscript -e 'source("stationInfo.R"); collect_station_info()'
-
       - name: Collect Station Status
         run: |
           Rscript -e 'source("bike_station_status.R"); safe_collect_daily_status()'
