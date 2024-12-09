@@ -94,7 +94,7 @@ jobs:
 
       - name: Collect Station Info
         run: |
-          Rscript -e 'source("stationInfo.R"); safe_collect_station_info()'
+          Rscript -e 'source("stationInfo.R"); collect_station_info'
 
       - name: Collect Station Status
         run: |
