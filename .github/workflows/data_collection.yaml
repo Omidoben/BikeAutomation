@@ -94,13 +94,13 @@ jobs:
 
       - name: Collect Station Info
         run: |
-          Rscript -e 'source("stationInfo.R"); collect_station_info'
+          Rscript -e 'source("stationInfo.R"); collect_station_info()'
 
       - name: Collect Station Status
         run: |
           Rscript -e 'source("bike_station_status.R"); safe_collect_daily_status()'
 
-      - name: Load Data for Shiny
+      - name: Load and Verify Data
         run: |
           Rscript -e 'source("load_data.R"); df <- load_most_recent_bike_data(); print(head(df))'
 
