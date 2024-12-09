@@ -36,8 +36,6 @@ jobs:
         run: |
           sudo mysql -h 127.0.0.1 -u root -prootpassword -e "SET GLOBAL local_infile = 1;"
           sudo mysql -h 127.0.0.1 -u root -prootpassword -e "SHOW VARIABLES LIKE 'local_infile';"
-
-          # Create user if not exists and grant privileges
           sudo mysql -h 127.0.0.1 -u root -prootpassword -e "
             CREATE USER IF NOT EXISTS '${{ secrets.DB_USER }}'@'%' IDENTIFIED BY '${{ secrets.DB_PASSWORD }}';
             GRANT ALL PRIVILEGES ON bikeshare_data.* TO '${{ secrets.DB_USER }}'@'%';
