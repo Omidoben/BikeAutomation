@@ -6,3 +6,6 @@
 2024-12-09 14:46:26.159689 ERROR::An error occurred in safe_collect_daily_status: Missing required environment variable: DB_HOST
 2024-12-09 14:50:27.18534 INFO::Starting daily bike station status collection
 2024-12-09 14:50:39.331455 INFO::Successfully collected and stored 783 records
+2024-12-09 14:41:29.105525 INFO::Starting daily bike station status collection
+2024-12-09 14:41:31.307611 INFO::Creating bike_station_raw table
+2024-12-09 14:41:31.354627 INFO::Successfully collected and stored 783 records
